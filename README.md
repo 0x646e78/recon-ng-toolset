@@ -7,8 +7,10 @@ I've been playing with [recon-ng](https://github.com/lanmaster53/recon-ng/) and 
 
 The repo contains the following:
 
-| *Makefile* | entrance point to interacting with this toolset |
-| *docker/* | Files for building our flavour of recon-ng |
+| path         | Explanation |
+|---           |---|
+| *Makefile*   | entrance point to interacting with this toolset |
+| *docker/*    | Files for building our flavour of recon-ng |
 | *templates/* | default templates to build import files from |
 | *resources/* | example resource scripts for automated workloads |
 
