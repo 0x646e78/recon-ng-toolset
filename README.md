@@ -1,8 +1,9 @@
-# recon-ng-toolset
-Playing with https://github.com/lanmaster53/recon-ng/
+# recon-ng Toolset
 
 Overview
 ---
+
+I've been playing with [recon-ng](https://github.com/lanmaster53/recon-ng/) and found some things useful which I've added here.
 
 The repo contains the following:
 
