@@ -1,0 +1,4 @@
+workspaces load example.com
+modules load recon/domains-hosts/hackertarget
+run
+exit

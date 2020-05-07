@@ -1,0 +1,3 @@
+[submodule "recon-ng"]
+	path = docker/recon-ng
+	url = git@github.com:lanmaster53/recon-ng.git
