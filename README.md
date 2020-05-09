@@ -30,7 +30,7 @@ To run a specific version (if a docker image exists of this version):
 
 #### Example Workflow
 
-After using the templates to populate csvs in `resources/imports/ and installing modules:
+After using the templates to populate csvs in `resources/imports/` and installing modules:
 
 ```
 R=resources/import-all make run
@@ -41,6 +41,11 @@ R=resources/export make run
 
 ### Local Build
 
-To make the image yourself you can run the following - and will need to update your make run command to run this.
+To make the image yourself you can run the following. 
 
-`make build`
+```
+git submodule update --init --recursive
+make build
+```
+
+You will need to update `Makefile` run this new image.
