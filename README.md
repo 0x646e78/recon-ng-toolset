@@ -41,7 +41,7 @@ R=resources/export make run
 
 ### Local Build
 
-To make the image yourself you can run the following. 
+To build the image you can run the following. 
 
 ```
 git submodule update --init --recursive
