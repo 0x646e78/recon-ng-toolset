@@ -1,7 +1,9 @@
-marketplace install recon/domains-hosts/google_site_web
+marketplace refresh
 marketplace install import/csv_file
 marketplace install import/list
 marketplace install import/nmap
+marketplace install discovery/info_disclosure/cache_snoop
+marketplace install discovery/info_disclosure/interesting_files
 marketplace install recon/companies-contacts/pen
 marketplace install recon/companies-domains/pen
 marketplace install recon/companies-domains/viewdns_reverse_whois
@@ -13,6 +15,7 @@ marketplace install recon/contacts-domains/migrate_contacts
 marketplace install recon/credentials-credentials/adobe
 marketplace install recon/domains-hosts/certificate_transparency
 marketplace install recon/domains-hosts/findsubdomains
+marketplace install recon/domains-hosts/google_site_web
 marketplace install recon/domains-hosts/hackertarget
 marketplace install recon/domains-hosts/mx_spf_ip
 marketplace install recon/domains-hosts/shodan_hostname
@@ -23,6 +26,4 @@ marketplace install recon/hosts-hosts/reverse_resolve
 marketplace install reporting/csv
 marketplace install reporting/json
 marketplace install reporting/list
-marketplace install discovery/info_disclosure/cache_snoop
-marketplace install discovery/info_disclosure/interesting_files
 exit
