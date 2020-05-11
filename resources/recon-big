@@ -1,13 +1,4 @@
 workspaces load example.com
-modules load discovery/info_disclosure/interesting_files
-run
-db query delete from domains where domain = "com";
-db query delete from domains where domain = "com.au";
-db query delete from domains where domain like "%google.com";
-db query delete from domains where domain like "%google.com.au";
-db query delete from hosts where host like "%google.com";
-db query delete from hosts where host like "%google.com.au";
-db query delete from hosts where host like "%googlemail.com";
 modules load recon/companies-contacts/pen
 run
 db query delete from domains where domain = "com";
@@ -18,15 +9,6 @@ db query delete from hosts where host like "%google.com";
 db query delete from hosts where host like "%google.com.au";
 db query delete from hosts where host like "%googlemail.com";
 modules load recon/companies-domains/pen
-run
-db query delete from domains where domain = "com";
-db query delete from domains where domain = "com.au";
-db query delete from domains where domain like "%google.com";
-db query delete from domains where domain like "%google.com.au";
-db query delete from hosts where host like "%google.com";
-db query delete from hosts where host like "%google.com.au";
-db query delete from hosts where host like "%googlemail.com";
-modules load recon/companies-domains/viewdns_reverse_whois
 run
 db query delete from domains where domain = "com";
 db query delete from domains where domain = "com.au";
