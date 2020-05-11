@@ -20,9 +20,13 @@ I'm publishing images to https://hub.docker.com/r/ectoplasm/recon-ng
 
 `make run`
 
-Automate by running from a resource file:
+Automate by running from a resource file. For example, install some modules:
 
 `R=resources/module-install make run`
+
+Install all modules which don't require an API key:
+
+`R=resources/modules-nokeys-nodeps make run`
 
 To run a specific version (if a docker image exists of this version):
 
