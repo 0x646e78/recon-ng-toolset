@@ -1,5 +1,6 @@
 SHELL:=/bin/bash
 ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
+TOOLSET_VER = 1
 VER:=$$(cat docker/recon-ng/VERSION |grep __version | cut -d\' -f2)
 TAG?=latest
 R?=
@@ -16,13 +17,16 @@ run:
 		-v ~/.recon-ng:/root/.recon-ng \
 		-v $(ROOT_DIR)/resources:/recon-ng/resources \
 		--entrypoint "./recon-ng" \
-		ectoplasm/recon-ng:$(TAG) $(RSRC)
+		docker.io/ectoplasm/recon-ng:$(TAG) $(RSRC)
 
 build:
-	@echo $(VER)
-	@docker build --rm -t recon-ng:$(VER) -t recon-ng:latest ./docker/.
+	@echo "$(VER)-$(TOOLSET_VER)"
+	@docker build --rm -t recon-ng:$(VER)-$(TOOLSET_VER) -t recon-ng:latest ./docker/.
 
 publish:
-	@dockertag recon-ng:$(VER) ectoplasm/recon-ng:latest
-	@dockertag recon-ng:$(VER) ectoplasm/recon-ng:$(VER)
-	@docker push ectoplasm/recon-ng:$(VER) && docker push ectoplasm/recon-ng:latest
+	@docker tag recon-ng:$(VER)-$(TOOLSET_VER) docker.io/ectoplasm/recon-ng:$(VER)
+	@docker tag docker.io/ectoplasm/recon-ng:$(VER) docker.io/ectoplasm/recon-ng:latest
+	@docker tag docker.io/ectoplasm/recon-ng:$(VER) docker.io/ectoplasm/recon-ng:$(VER)-$(TOOLSET_VER)
+	@docker push docker.io/ectoplasm/recon-ng:$(VER)-$(TOOLSET_VER) &&\
+  	docker push docker.io/ectoplasm/recon-ng:$(VER) &&\
+	 	docker push docker.io/ectoplasm/recon-ng:latest

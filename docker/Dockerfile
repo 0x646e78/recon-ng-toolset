@@ -16,3 +16,5 @@ RUN apk add --no-cache --virtual .build-deps gcc libc-dev libxslt-dev &&\
     pip install --no-cache-dir -r REQUIREMENTS &&\
     rm REQUIREMENTS &&\
     apk del .build-deps
+#libressl-dev musl-dev &&\
+#pip install M2Crypto &&\

@@ -1,20 +1,29 @@
 workspaces load example.com
 modules load reporting/csv
 options set HEADERS true
-options set TABLE hosts
-options set FILENAME resources/reports/hosts.csv
+options set TABLE companies
+options set FILENAME resources/reports/companies.csv
+run
+options set TABLE contacts
+options set FILENAME resources/reports/contacts.csv
+run
+options set TABLE credentials
+options set FILENAME resources/reports/credentials.csv
 run
 options set TABLE domains
 options set FILENAME resources/reports/domains.csv
 run
-options set TABLE credentials
-options set FILENAME resources/reports/credentials.csv
+options set TABLE hosts
+options set FILENAME resources/reports/hosts.csv
 run
 options set TABLE leaks
 options set FILENAME resources/reports/leaks.csv
 run
 options set TABLE ports
 options set FILENAME resources/reports/ports.csv
+run
+options set TABLE repositories
+options set FILENAME resources/reports/repositories.csv
 run
 options set TABLE vulnerabilities
 options set FILENAME resources/reports/vulnerabilities.csv
