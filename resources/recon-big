@@ -8,25 +8,22 @@ db query delete from domains where domain = "com.au";
 db query delete from domains where domain = "example.com";
 db query delete from domains where domain like "%google.com";
 db query delete from domains where domain like "%google.com.au";
-modules load recon/companies-multi/shodan_org
-run
-db query delete from domains where domain = "com";
-db query delete from domains where domain = "com.au";
-db query delete from domains where domain = "example.com";
-db query delete from domains where domain like "%google.com";
-db query delete from domains where domain like "%google.com.au";
-db query delete from hosts where host like "%google.com";
-db query delete from hosts where host like "%google.com.au";
-db query delete from hosts where host like "%googlemail.com";
 modules load recon/companies-multi/whois_miner
+run
+modules load recon/companies-multi/github_miner
+run
+modules load recon/companies-multi/shodan_org
 run
 modules load recon/contacts-domains/migrate_contacts
 run
 db query delete from domains where domain = "com";
 db query delete from domains where domain = "com.au";
 db query delete from domains where domain = "example.com";
-db query delete from domains where domain like "%google.com";
-db query delete from domains where domain like "%google.com.au";
+db query delete from hosts where host like "%.auth0.com";
+db query delete from hosts where host like "%mx%google.com";
+db query delete from hosts where host like "%mx%google.com.au";
+db query delete from hosts where host like "%googlemail.com";
+db query delete from hosts where host like "%zendesk.com";
 modules load recon/credentials-credentials/bozocrack
 run
 modules load recon/domains-companies/pen
@@ -43,101 +40,87 @@ modules load recon/domains-credentials/scylla
 run
 modules load recon/domains-hosts/bing_domain_web
 run
-modules load recon/domains-hosts/brute_hosts
-run
 modules load recon/domains-hosts/certificate_transparency
 run
-db query delete from hosts where host like "%google.com";
-db query delete from hosts where host like "%google.com.au";
+db query delete from hosts where host like "%.auth0.com";
+db query delete from hosts where host like "%mx%google.com";
+db query delete from hosts where host like "%mx%google.com.au";
 db query delete from hosts where host like "%googlemail.com";
-modules load recon/domains-hosts/findsubdomains
-run
-db query delete from domains where domain = "com";
-db query delete from domains where domain = "com.au";
-db query delete from domains where domain = "example.com";
-db query delete from domains where domain like "%google.com";
-db query delete from domains where domain like "%google.com.au";
-db query delete from hosts where host like "%google.com";
-db query delete from hosts where host like "%google.com.au";
-db query delete from hosts where host like "%googlemail.com";
+db query delete from hosts where host like "%zendesk.com";
 modules load recon/domains-hosts/google_site_web
 run
-db query delete from domains where domain = "com";
-db query delete from domains where domain = "com.au";
-db query delete from domains where domain = "example.com";
-db query delete from domains where domain like "%google.com";
-db query delete from domains where domain like "%google.com.au";
-db query delete from hosts where host like "%google.com";
-db query delete from hosts where host like "%google.com.au";
+db query delete from hosts where host like "%.auth0.com";
+db query delete from hosts where host like "%mx%google.com";
+db query delete from hosts where host like "%mx%google.com.au";
 db query delete from hosts where host like "%googlemail.com";
+db query delete from hosts where host like "%zendesk.com";
 modules load recon/domains-hosts/hackertarget
 run
-db query delete from domains where domain = "com";
-db query delete from domains where domain = "com.au";
-db query delete from domains where domain = "example.com";
-db query delete from domains where domain like "%google.com";
-db query delete from domains where domain like "%google.com.au";
-db query delete from hosts where host like "%google.com";
-db query delete from hosts where host like "%google.com.au";
+db query delete from hosts where host like "%.auth0.com";
+db query delete from hosts where host like "%mx%google.com";
+db query delete from hosts where host like "%mx%google.com.au";
 db query delete from hosts where host like "%googlemail.com";
+db query delete from hosts where host like "%zendesk.com";
 modules load recon/domains-hosts/mx_spf_ip
 run
-db query delete from domains where domain = "com";
-db query delete from domains where domain = "com.au";
-db query delete from domains where domain = "example.com";
-db query delete from domains where domain like "%google.com";
-db query delete from domains where domain like "%google.com.au";
-db query delete from hosts where host like "%google.com";
-db query delete from hosts where host like "%google.com.au";
+db query delete from hosts where host like "%.auth0.com";
+db query delete from hosts where host like "%mx%google.com";
+db query delete from hosts where host like "%mx%google.com.au";
 db query delete from hosts where host like "%googlemail.com";
-modules load recon/domains-hosts/shodan_hostname
+db query delete from hosts where host like "%zendesk.com";
+modules load recon/domains-hosts/netcraft
 run
-db query delete from domains where domain = "com";
-db query delete from domains where domain = "com.au";
-db query delete from domains where domain = "example.com";
-db query delete from domains where domain like "%google.com";
-db query delete from domains where domain like "%google.com.au";
-db query delete from hosts where host like "%google.com";
-db query delete from hosts where host like "%google.com.au";
+db query delete from hosts where host like "%.auth0.com";
+db query delete from hosts where host like "%mx%google.com";
+db query delete from hosts where host like "%mx%google.com.au";
 db query delete from hosts where host like "%googlemail.com";
+db query delete from hosts where host like "%zendesk.com";
+modules load recon/domains-hosts/shoden_hostname
+run
 modules load recon/domains-hosts/threatcrowd
 run
-db query delete from domains where domain = "com";
-db query delete from domains where domain = "com.au";
-db query delete from domains where domain = "example.com";
-db query delete from domains where domain like "%google.com";
-db query delete from domains where domain like "%google.com.au";
-db query delete from hosts where host like "%google.com";
-db query delete from hosts where host like "%google.com.au";
+db query delete from hosts where host like "%.auth0.com";
+db query delete from hosts where host like "%mx%google.com";
+db query delete from hosts where host like "%mx%google.com.au";
 db query delete from hosts where host like "%googlemail.com";
+db query delete from hosts where host like "%zendesk.com";
 modules load recon/domains-hosts/threatminer
 run
-db query delete from domains where domain = "com";
-db query delete from domains where domain = "com.au";
-db query delete from domains where domain = "example.com";
-db query delete from domains where domain like "%google.com";
-db query delete from domains where domain like "%google.com.au";
-db query delete from hosts where host like "%google.com";
-db query delete from hosts where host like "%google.com.au";
+db query delete from hosts where host like "%.auth0.com";
+db query delete from hosts where host like "%mx%google.com";
+db query delete from hosts where host like "%mx%google.com.au";
 db query delete from hosts where host like "%googlemail.com";
+db query delete from hosts where host like "%zendesk.com";
+modules load recon/domains-vulnerabilities/xssed
+run
 modules load recon/hosts-hosts/resolve
 run
-db query delete from domains where domain = "com";
-db query delete from domains where domain = "com.au";
-db query delete from domains where domain = "example.com";
-db query delete from domains where domain like "%google.com";
-db query delete from domains where domain like "%google.com.au";
-db query delete from hosts where host like "%google.com";
-db query delete from hosts where host like "%google.com.au";
+db query delete from hosts where host like "%.auth0.com";
+db query delete from hosts where host like "%mx%google.com";
+db query delete from hosts where host like "%mx%google.com.au";
 db query delete from hosts where host like "%googlemail.com";
+db query delete from hosts where host like "%zendesk.com";
 modules load recon/hosts-hosts/reverse_resolve
 run
-db query delete from domains where domain = "com";
-db query delete from domains where domain = "com.au";
-db query delete from domains where domain = "example.com";
-db query delete from domains where domain like "%google.com";
-db query delete from domains where domain like "%google.com.au";
-db query delete from hosts where host like "%google.com";
-db query delete from hosts where host like "%google.com.au";
+db query delete from hosts where host like "%.auth0.com";
+db query delete from hosts where host like "%mx%google.com";
+db query delete from hosts where host like "%mx%google.com.au";
 db query delete from hosts where host like "%googlemail.com";
+db query delete from hosts where host like "%zendesk.com";
+modules load recon/hosts-locations/migrate_hosts
+run
+modules load recon/netblocks-companies/whois_orgs 
+run
+db query delete from companies where company == "Asia Pacific Network Information Centre";
+modules load recon/ports-hosts/migrate_ports
+run
+modules load recon/profiles-contacts/dev_diver
+run
+options set source query select email from contacts where email not null
+run
+options set source query select username from credentials where username not null
+run
+options set SOURCE default
+modules load recon/repositories-vulnerabilities/gists_search
+run
 exit
