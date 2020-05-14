@@ -19,8 +19,20 @@ run
 options set TABLE leaks
 options set FILENAME resources/reports/leaks.csv
 run
+options set TABLE locations
+options set FILENAME resources/reports/locations.csv
+run
+options set TABLE netblocks
+options set FILENAME resources/reports/netblocks.csv
+run
 options set TABLE ports
 options set FILENAME resources/reports/ports.csv
+run
+options set TABLE profiles
+options set FILENAME resources/reports/profiles.csv
+run
+options set TABLE pushpins
+options set FILENAME resources/reports/pushpins.csv
 run
 options set TABLE repositories
 options set FILENAME resources/reports/repositories.csv

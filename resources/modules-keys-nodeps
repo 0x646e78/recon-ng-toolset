@@ -1,0 +1,24 @@
+marketplace refresh
+marketplace install recon/companies-multi/github_miner
+marketplace install recon/companies-multi/shodan_org
+marketplace install recon/contacts-profiles/fullcontact
+marketplace install recon/credentials-credentials/hashes_org
+marketplace install recon/domains-contacts/hunter_io
+marketplace install recon/domains-hosts/binaryedge
+marketplace install recon/domains-hosts/builtwith
+marketplace install recon/domains-hosts/shodan_hostname
+marketplace install recon/hosts-hosts/ipinfodb
+marketplace install recon/hosts-hosts/virustotal
+marketplace install recon/hosts-ports/binaryedge
+marketplace install recon/hosts-ports/shodan_ip
+marketplace install recon/locations-locations/geocode
+marketplace install recon/locations-locations/reverse_geocode
+marketplace install recon/locations-pushpins/shodan
+marketplace install recon/locations-pushpins/youtube
+marketplace install recon/netblocks-hosts/shodan_net
+marketplace install recon/netblocks-hosts/virustotal
+marketplace install recon/profiles-contacts/github_users
+marketplace install recon/profiles-repositories/github_repos
+marketplace install recon/repositories-profiles/github_commits
+marketplace install recon/repositories-vulnerabilities/github_dorks
+exit

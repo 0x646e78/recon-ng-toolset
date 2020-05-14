@@ -52,4 +52,4 @@ git submodule update --init --recursive
 make build
 ```
 
-You will need to update `Makefile` run this new image.
+You will need to update `Makefile` to run this new image.

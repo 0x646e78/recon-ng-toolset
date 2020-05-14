@@ -1,0 +1,41 @@
+workspaces remove example.com
+workspaces create example.com
+modules load import/csv_file
+options unset QUOTE_CHARACTER
+options set FILENAME resources/imports/companies.csv
+options set TABLE companies
+options set CSV_COMPANY company
+run
+options set FILENAME resources/imports/contacts.csv
+options set TABLE contacts
+options set CSV_COUNTRY country
+options set CSV_EMAIL email
+options set CSV_FIRST_NAME first_name
+options set CSV_MIDDLE_NAME middle_name
+options set CSV_PHONE phone
+options set CSV_REGION region
+options set CSV_TITLE title
+run
+options set FILENAME resources/imports/domains.csv
+options set TABLE domains
+options set CSV_DOMAIN domain
+options set CSV_MODULE module
+options set CSV_NOTES notes
+run
+options set FILENAME resources/imports/profiles.csv
+options set TABLE profiles
+options set CSV_NOTES notes
+options set CSV_RESOURCE resource
+options set CSV_URL url
+options set CSV_USERNAME username
+run
+options set FILENAME resources/imports/repositories.csv
+options set TABLE repositories
+options set CSV_CATEGORY category
+options set CSV_DESCRIPTION description
+options set CSV_NAME name
+options set CSV_OWNER owner
+options set CSV_RESOURCE resource
+options set CSV_URL url
+run
+exit

@@ -8,9 +8,12 @@ db query delete from domains where domain = "com.au";
 db query delete from domains where domain = "example.com";
 db query delete from domains where domain like "%google.com";
 db query delete from domains where domain like "%google.com.au";
-modules load recon/companies-multi/whois_miner
-run
 modules load recon/companies-multi/github_miner
+options set source ORGNAME
+run
+options set source default
+run
+modules load recon/companies-multi/whois_miner
 run
 modules load recon/companies-multi/shodan_org
 run
@@ -19,12 +22,11 @@ run
 db query delete from domains where domain = "com";
 db query delete from domains where domain = "com.au";
 db query delete from domains where domain = "example.com";
-db query delete from hosts where host like "%.auth0.com";
-db query delete from hosts where host like "%mx%google.com";
-db query delete from hosts where host like "%mx%google.com.au";
-db query delete from hosts where host like "%googlemail.com";
-db query delete from hosts where host like "%zendesk.com";
+modules load recon/contacts-profiles/fullcontact
+run
 modules load recon/credentials-credentials/bozocrack
+run
+modules load recon/credentials-credentials/hashes_org
 run
 modules load recon/domains-companies/pen
 run
@@ -38,7 +40,11 @@ modules load recon/domains-contacts/wikileaker
 run
 modules load recon/domains-credentials/scylla
 run
+modules load recon/domains-hosts/binaryedge
+run
 modules load recon/domains-hosts/bing_domain_web
+run
+modules load recon/domains-hosts/builtwith
 run
 modules load recon/domains-hosts/certificate_transparency
 run
@@ -75,7 +81,7 @@ db query delete from hosts where host like "%mx%google.com";
 db query delete from hosts where host like "%mx%google.com.au";
 db query delete from hosts where host like "%googlemail.com";
 db query delete from hosts where host like "%zendesk.com";
-modules load recon/domains-hosts/shoden_hostname
+modules load recon/domains-hosts/shodan_hostname
 run
 modules load recon/domains-hosts/threatcrowd
 run
@@ -109,6 +115,14 @@ db query delete from hosts where host like "%googlemail.com";
 db query delete from hosts where host like "%zendesk.com";
 modules load recon/hosts-locations/migrate_hosts
 run
+modules load recon/hosts-ports/binaryedge
+run
+modules load recon/hosts-ports/shodan_ip
+run
+modules load recon/locations-locations/geocode
+run
+modules load recon/locations-locations/reverse_geocode
+run
 modules load recon/netblocks-companies/whois_orgs 
 run
 db query delete from companies where company == "Asia Pacific Network Information Centre";
@@ -121,6 +135,12 @@ run
 options set source query select username from credentials where username not null
 run
 options set SOURCE default
+modules load recon/profiles-contacts/github_users
+run
+modules load recon/profiles-repositories/github_repos
+run
 modules load recon/repositories-vulnerabilities/gists_search
+run
+modules load recon/repositories-vulnerabilities/github_dorks
 run
 exit
