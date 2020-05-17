@@ -9,10 +9,10 @@ The repo contains the following:
 
 | path       | Explanation |
 |---         |---|
-| Makefile   | entrance point to interacting with this toolset |
 | docker/    | Files for building our flavour of recon-ng |
-| templates/ | default templates to build import files from |
+| Makefile   | entrance point to interacting with this toolset |
 | resources/ | example resource scripts for automated workloads |
+| templates/ | default templates to build import files from |
 
 I'm publishing images to https://hub.docker.com/r/ectoplasm/recon-ng
 
