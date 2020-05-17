@@ -12,6 +12,7 @@ The repo contains the following:
 | docker/    | Files for building our flavour of recon-ng |
 | Makefile   | entrance point to interacting with this toolset |
 | resources/ | example resource scripts for automated workloads |
+| scripts/   | helper scripts; e.g database browser etc |
 | templates/ | default templates to build import files from |
 
 I'm publishing images to https://hub.docker.com/r/ectoplasm/recon-ng
@@ -37,11 +38,12 @@ To run a specific version (if a docker image exists of this version):
 After using the templates to populate csvs in `resources/imports/` and installing modules:
 
 ```
-R=resources/import-all make run
-R=resources/recon-big make run
+R=resources/import make run
 R=resources/recon-big make run
 R=resources/export make run
 ```
+
+csv output will be in `resources/reports`
 
 ### Local Build
 
