@@ -1,4 +1,3 @@
-workspaces remove example.com
 workspaces create example.com
 modules load import/csv_file
 options set QUOTE_CHARACTER "
@@ -23,7 +22,7 @@ options set CSV_MODULE module
 options set CSV_NOTES notes
 run
 options set FILENAME resources/imports/hosts.csv
-options set TABLE ports
+options set TABLE hosts
 options set CSV_HOST host
 options set CSV_IP_ADDRESS ip_address
 options set CSV_LATITUDE latitude

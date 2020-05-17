@@ -1,3 +1,4 @@
 [submodule "recon-ng"]
 	path = docker/recon-ng
-	url = git@github.com:lanmaster53/recon-ng.git
+  url = git@github.com:0x646e78/recon-ng.git
+  branch = dnx-market

@@ -1,6 +1,6 @@
 SHELL:=/bin/bash
 ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
-TOOLSET_VER = 1
+TOOLSET_VER = 2
 VER:=$$(cat docker/recon-ng/VERSION |grep __version | cut -d\' -f2)
 TAG?=latest
 R?=
@@ -16,8 +16,14 @@ run:
 	@docker run --rm -it \
 		-v ~/.recon-ng:/root/.recon-ng \
 		-v $(ROOT_DIR)/resources:/recon-ng/resources \
-		--entrypoint "./recon-ng" \
 		docker.io/ectoplasm/recon-ng:$(TAG) $(RSRC)
+
+run-dev:
+	@mkdir -p $(HOME)/.recon-ng/
+	@docker run --rm -it \
+		-v ~/.recon-ng:/root/.recon-ng \
+		-v $(ROOT_DIR)/resources:/recon-ng/resources \
+		recon-ng:$(TAG) $(RSRC)
 
 build:
 	@echo "$(VER)-$(TOOLSET_VER)"

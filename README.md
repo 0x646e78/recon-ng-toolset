@@ -52,4 +52,5 @@ git submodule update --init --recursive
 make build
 ```
 
-You will need to update `Makefile` to run this new image.
+You can run from this local image with `make run-dev`
+
