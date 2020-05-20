@@ -12,20 +12,12 @@ modules load recon/companies-multi/github_miner
 options set IGNOREFORKS true
 options set source ORGNAME
 run
-options set source default
+modules load recon/repositories-profiles/github_commits
 run
 modules load recon/companies-multi/whois_miner
 run
 modules load recon/companies-multi/shodan_org
 run
-modules load recon/contacts-domains/migrate_contacts
-run
-db query delete from domains where domain = "com";
-db query delete from domains where domain = "com.au";
-db query delete from domains where domain = "example.com";
-db query delete from domains where domain = "gmail.com";
-db query delete from domains where domain = "hotmail.com";
-db query delete from domains where domain = "outlook.com";
 modules load recon/contacts-profiles/fullcontact
 run
 modules load recon/domains-companies/pen
@@ -141,8 +133,6 @@ modules load recon/profiles-repositories/github_repos
 options set IGNOREFORKS true
 run
 modules load recon/repositories-vulnerabilities/gists_search
-run
-modules load recon/repositories-vulnerabilities/github_dorks
 run
 modules load recon/credentials-credentials/bozocrack
 run
