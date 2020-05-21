@@ -38,4 +38,5 @@ options set CSV_OWNER owner
 options set CSV_RESOURCE resource
 options set CSV_URL url
 run
+options unset FILENAME
 exit
