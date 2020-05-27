@@ -2,6 +2,12 @@ workspaces remove example.com
 workspaces create example.com
 modules load import/csv_file
 options unset QUOTE_CHARACTER
+options set FILENAME resources/imports/scope.csv
+options set TABLE scope
+options set CSV_VALUE value
+options set CSV_COLUMN column
+options set CSV_ACTION action
+run
 options set FILENAME resources/imports/companies.csv
 options set TABLE companies
 options set CSV_COMPANY company

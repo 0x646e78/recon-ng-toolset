@@ -1,0 +1,6 @@
+value,column,action,notes
+.*mx.*google\.com,host,blacklist,
+.*mx.*google\.com\.au,host,blacklist,
+.*\.googlemail\.com,host,blacklist,
+one\.one\.one\.one,host,blacklist,
+.*\.auth0\.com,host,blacklist,

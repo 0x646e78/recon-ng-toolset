@@ -1,6 +1,6 @@
 SHELL:=/bin/bash
 ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
-TOOLSET_VER = 2
+TOOLSET_VER = 3
 VER:=$$(cat docker/recon-ng/VERSION |grep __version | cut -d\' -f2)
 TAG?=latest
 R?=
