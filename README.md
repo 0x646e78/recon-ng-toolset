@@ -3,7 +3,7 @@
 Overview
 ---
 
-I've been playing with [recon-ng](https://github.com/lanmaster53/recon-ng/) and found some things useful which I've added here.
+I've been enjoying [recon-ng](https://github.com/lanmaster53/recon-ng/), and it's use of resource files to run tasks is super useful. I've developed some workflows and small changes to the Dockerfile, this repo is a place for me to keep these.
 
 The repo contains the following:
 
