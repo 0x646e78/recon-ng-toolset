@@ -127,6 +127,7 @@ run
 modules load recon/netblocks-companies/whois_orgs 
 run
 db query delete from companies where company == "Asia Pacific Network Information Centre";
+db query delete from companies where company == "RIPE Network Coordination Centre";
 db query delete from companies where company == "Veritas Technologies LLC";
 modules load recon/ports-hosts/migrate_ports
 run

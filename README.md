@@ -3,7 +3,7 @@
 Overview
 ---
 
-I've been enjoying [recon-ng](https://github.com/lanmaster53/recon-ng/), and it's use of resource files to run tasks is super useful. I've developed some workflows and small changes to the Dockerfile, this repo is a place for me to keep these.
+I've been enjoying [recon-ng](1), and it's use of resource files to run tasks is super useful. I've developed some workflows and small changes to the Dockerfile, this repo is a place for me to keep these.
 
 The repo contains the following:
 
@@ -53,3 +53,17 @@ make build
 ```
 
 You can run from this local image with `make run-dev`
+
+# recon-ng
+
+This project is all about working with [recon-ng][1] as it's main engine.
+If you're inclined to support the work, please support recon-ng
+
+You can support while also learning by signing up to the [pluralsight course][2]
+or [see here for donation details][3]
+
+
+[1]: https://github.com/lanmaster53/recon-ng
+[2]: https://www.pluralsight.com/courses/technical-information-gathering-recon-ng
+[3]: https://github.com/lanmaster53/recon-ng/blob/master/README.md#donations
+
