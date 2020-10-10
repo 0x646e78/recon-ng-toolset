@@ -25,7 +25,6 @@ run
 options set FILENAME resources/imports/domains.csv
 options set TABLE domains
 options set CSV_DOMAIN domain
-options set CSV_MODULE module
 options set CSV_NOTES notes
 run
 options set FILENAME resources/imports/profiles.csv

@@ -14,7 +14,7 @@ COPY ./recon-ng/recon-web ./recon-web
 
 RUN apk add --no-cache --virtual .build-deps gcc libc-dev libxslt-dev &&\
     apk add --no-cache libxslt &&\
-    pip install --no-cache-dir -r REQUIREMENTS &&\
+    pip install --no-cache-dir shodan -r REQUIREMENTS &&\
     rm REQUIREMENTS &&\
     apk del .build-deps
 #TODO: M2Crypto

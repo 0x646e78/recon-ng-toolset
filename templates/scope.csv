@@ -1,6 +1,11 @@
 value,column,action,notes
+one\.one\.one\.one,host,blacklist,
 .*mx.*google\.com,host,blacklist,
 .*mx.*google\.com\.au,host,blacklist,
-.*\.googlemail\.com,host,blacklist,
-one\.one\.one\.one,host,blacklist,
+.*\.1e100\.net,host,blacklist,
 .*\.auth0\.com,host,blacklist,
+.*\.googlemail\.com,host,blacklist,
+.*\.myshopify\.com,host,blacklist,
+.*\.sendgrid\.net,host,blacklist,
+.*\.siteforce\.com,host,blacklist,
+.*\.zendesk\.com,host,blacklist,
